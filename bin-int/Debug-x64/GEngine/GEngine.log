@@ -1,6 +1,0 @@
-﻿  Log.cpp
-S:\Studium\02_mai\2_Semester\EAD\GEngine\GEngine\src\GEngine\Log.h(17,42): warning C4251: "GEngine::Log::s_CoreLogger": class "std::shared_ptr<spdlog::logger>" erfordert eine DLL-Schnittstelle, die von Clients von class "GEngine::Log" verwendet wird
-S:\Studium\02_mai\2_Semester\EAD\GEngine\GEngine\vendor\spdlog\include\spdlog\details\registry.h(34): message : Siehe Deklaration von "std::shared_ptr<spdlog::logger>"
-S:\Studium\02_mai\2_Semester\EAD\GEngine\GEngine\src\GEngine\Log.h(18,42): warning C4251: "GEngine::Log::s_ClientLogger": class "std::shared_ptr<spdlog::logger>" erfordert eine DLL-Schnittstelle, die von Clients von class "GEngine::Log" verwendet wird
-S:\Studium\02_mai\2_Semester\EAD\GEngine\GEngine\vendor\spdlog\include\spdlog\details\registry.h(34): message : Siehe Deklaration von "std::shared_ptr<spdlog::logger>"
-  GEngine.vcxproj -> S:\Studium\02_mai\2_Semester\EAD\GEngine\bin\Debug-x64\GEngine\GEngine.dll
