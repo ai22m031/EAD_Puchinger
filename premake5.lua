@@ -6,6 +6,8 @@ workspace "GEngine"
 		"Dist"
 	}
 
+startproject "Sandbox"
+
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 project "GEngine"
@@ -22,10 +24,12 @@ project "GEngine"
 	}
 
 	includedirs{
-		"%{prj.name}/vendor/spdlog/include"
+		"%{prj.name}/vendor/spdlog/include",
+		"%{prj.name}/src"
 	}
 
 	filter "system:windows"
+  architecture "x86_64"
 		cppdialect "C++17"
 		staticruntime "On"
 		systemversion "latest"
