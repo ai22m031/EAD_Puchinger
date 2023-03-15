@@ -10,6 +10,13 @@ startproject "Sandbox"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+--Include directores relative to root folder (solution directory)
+IncludeDir = {}
+IncludeDir["GLFW"] = "GEngine/vendor/GLFW/include"
+
+include "GEngine/vendor/GLFW"
+
+
 project "GEngine"
 	location "GEngine"
 	kind "SharedLib"
@@ -29,13 +36,21 @@ project "GEngine"
 
 	includedirs{
 		"%{prj.name}/vendor/spdlog/include",
-		"%{prj.name}/src"
+		"%{prj.name}/src",
+		"%{IncludeDir.GLFW}"
 	}
+	
+	links{
+		"GLFW",
+		"opengl32.lib"
+	}
+	
 
 	filter "system:windows"
-  architecture "x86_64"
+		architecture "x86_64"
 		cppdialect "C++17"
-		staticruntime "On"
+		staticruntime "Off" -- set to "Off" to enable Multithreaded DLL or Multithreaded Debug DLL
+		runtime "Debug" -- set to "Debug" to use /MDd
 		systemversion "latest"
 		
 		defines{

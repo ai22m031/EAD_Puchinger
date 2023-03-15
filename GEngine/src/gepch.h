@@ -13,6 +13,8 @@
 #include <unordered_map>
 #include <unordered_set>
 
+#include <GEngine/Log.h>
+
 #ifdef GE_PLATFORM_WINDOWS
 	#include < Windows.h>
 #endif
